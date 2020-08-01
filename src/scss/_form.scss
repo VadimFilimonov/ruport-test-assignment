@@ -1,0 +1,127 @@
+.form {
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	padding: vw(35) vw(55) vw(40);
+	background-color: #fff;
+	box-sizing: border-box;
+	width: vw(515);
+
+	@media screen and (max-width: 1024px) {
+		padding: vmin(40) vmin(40) vmin(45);
+		width: 100vw;
+		height: 100vh;
+		overflow-y: scroll;
+		top: 0;
+		left: 0;
+		transform: none
+	}
+
+}
+
+.form__title {
+	font-size: vw(40);
+	margin: 0 0 vw(15);
+	text-transform: uppercase;
+	letter-spacing: .06em;
+	font-weight: 500;
+	line-height: 1;
+	color: $color-text;
+
+	@media screen and (max-width: 1024px) {
+		font-size: vmin(36);
+		margin: 0 0 vmin(15);
+	}
+
+}
+
+.form__label {
+	display: block;
+	color: $color-text;
+	font-size: vw(16);
+	opacity: .7;
+	margin: 0 0 vw(4);
+
+	@media screen and (max-width: 1024px) {
+		font-size: vmin(14);
+		margin: 0 0 vmin(4);
+	}
+
+	&--required {
+
+		&::after {
+			content: '*';
+			color: $color-error;
+			margin: 0 0 0 .2em;
+		}
+
+	}
+
+}
+
+.form__input {
+	margin: 0;
+	padding: 0;
+	display: block;
+	width: 100%;
+	box-sizing: border-box;
+	padding: vw(11) vw(12);
+	border: 1px solid rgba(0, 0, 0, .1);
+	border-radius: 0;
+	font-size: vw(14);
+	color: $color-text;
+	box-sizing: border-box;
+	margin: 0 0 vw(15);
+
+	@media screen and (max-width: 1024px) {
+		padding: vmin(10) vmin(11);
+		font-size: vmin(12);
+		margin: 0 0 vmin(10);
+	}
+
+	&:focus {
+		outline: none;
+		border-color: $color-accent;
+	}
+
+	&--error {
+		border-color: $color-error;
+	}
+
+	&::placeholder {
+		color: rgba(0, 0, 0, .2);
+	}
+
+}
+
+.form__textarea {
+	margin: 0;
+	padding: 0;
+	width: 100%;
+	resize: none;
+	display: block;
+	padding: vw(11) vw(12);
+	border: 1px solid rgba(0, 0, 0, .1);
+	border-radius: 0;
+	font-size: vw(14);
+	color: $color-text;
+	box-sizing: border-box;
+	margin: 0 0 vw(15);
+
+	@media screen and (max-width: 1024px) {
+		padding: vmin(11) vmin(12);
+		font-size: vmin(14);
+		margin: 0 0 vmin(10);
+	}
+
+	&:focus {
+		outline: none;
+		border-color: $color-accent;
+	}
+
+	&::placeholder {
+		color: rgba(0, 0, 0, .2);
+	}
+
+}
