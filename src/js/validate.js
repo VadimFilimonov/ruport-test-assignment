@@ -1,5 +1,4 @@
-(function() {
-
+(function () {
   const EMAIL_REGEXP = /^(([^<>()[\].,;:\s@"]+(\.[^<>()[\].,;:\s@"]+)*)|(".+"))@(([^<>()[\].,;:\s@"]+\.)+[^<>()[\].,;:\s@"]{2,})$/iu;
 
   let form;
@@ -8,10 +7,10 @@
   let submit;
 
   function findElements() {
-    form = document.getElementById('form');
-    name = document.getElementById('name');
-    mail = document.getElementById('mail');
-    submit = document.getElementById('submit');
+    form = document.getElementById("form");
+    name = document.getElementById("name");
+    mail = document.getElementById("mail");
+    submit = document.getElementById("submit");
   }
 
   function isName(value) {
@@ -31,11 +30,11 @@
   }
 
   function clearField(field) {
-    field.classList.remove('form__input--error');
+    field.classList.remove("form__input--error");
   }
 
   function errorField(field) {
-    field.classList.add('form__input--error');
+    field.classList.add("form__input--error");
   }
 
   function enableForm() {
@@ -68,7 +67,7 @@
   }
 
   function subscribe() {
-    form.addEventListener('input', onInput);
+    form.addEventListener("input", onInput);
   }
 
   function init() {
@@ -77,5 +76,4 @@
   }
 
   init();
-
-}());
+})();

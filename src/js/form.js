@@ -1,10 +1,10 @@
-(function() {
+(function () {
   var form;
   var action;
   var message;
 
   function findElements() {
-    form = document.querySelector('.form');
+    form = document.querySelector(".form");
     action = form.action;
   }
 
@@ -21,7 +21,8 @@
   }
 
   function onSuccess(response) {
-    return response.json()
+    return response
+      .json()
       .then(handleResponse)
       .then(showMessage)
       .then(resetForm);
@@ -34,7 +35,7 @@
 
   function setOptions(form) {
     return {
-      method: 'post',
+      method: "post",
       body: collectData(form),
     };
   }
@@ -46,14 +47,13 @@
   function onSubmit(event) {
     event.preventDefault();
     var currentTarget = event.currentTarget;
-    sendForm(currentTarget)
-      .then(function(response) {
-         onSuccess(response, currentTarget);
-      });
+    sendForm(currentTarget).then(function (response) {
+      onSuccess(response, currentTarget);
+    });
   }
 
   function subscribe() {
-    form.addEventListener('submit', onSubmit);
+    form.addEventListener("submit", onSubmit);
   }
 
   function init() {
@@ -62,5 +62,4 @@
   }
 
   init();
-
-}());
+})();
